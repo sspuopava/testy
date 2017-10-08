@@ -1,0 +1,733 @@
+<!doctype html>
+<html class="no-js" lang="cs">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Hind+Guntur:300,400,500,600,700|Roboto+Condensed:300,300i,400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <!--   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+
+    <link href="js/vendor/c3/c3.css" rel="stylesheet">
+    <link rel="stylesheet" href="js/vendor/slick/slick.css">
+    <link rel="stylesheet" href="js/vendor/slick/slick-theme.css" />
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        .liquidFillGaugeText {
+            font-family: Helvetica;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <header class="jumbotron">
+        <div class="container">
+            <h1>01 | Databázové systémy <small>testy a úkoly</small></h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="container tblock" id="p301-b001" data-key="0">
+            <header class="row">
+                <div class="col-md-11">
+                    <h2><big>A : </big> Hromadné zpracování dat na počítači</h2>
+                </div>
+                <div class="col-md-1 text-right">
+                    <h2 class="tvalidate" title="Vyhodnotit"><span class="glyphicon glyphicon-saved"></span></h2>
+                    <h2 class="tactivate" title="Spustit"><span class="glyphicon glyphicon-play-circle"></span></h2>
+                </div>
+            </header>
+            <footer class="row">
+            </footer>
+            <article class="row">
+                <div class="col-sm-12">
+                    <header class="row">
+                        <div class="col-sm-11">
+                            <h3>Předchůdci databázových systémů</h3>
+                        </div>
+                        <div class="col-sm-1 text-right">
+                            <h5 class="symbols"><span class="glyphicon glyphicon-pencil"></span></h5>
+                        </div>
+                        <div class="col-sm-12">
+                            <p>Doplňte chybějící pojmy. Dodržujte český (anglický) pravopis.</p>
+                        </div>
+                    </header>
+                    <p>Elektronické databázové systémy vznikly z potřeby přechovávat a
+                        zpracovávat velké množství dat. Postupně nahradily papírové <span class="tnode tinput">kartotéky</span>
+                        a plní například také funkci rejstříků v knihovnách či archívech.</p>
+                    <p>Před vznikem prvních databázových systémů bylo hromadné zpracování
+                        dat řešeno formou systémů pro správu souborů (FMS - File <span class="tnode tinput" title="Anglický termín, pište velká písmena na začátku každého slova">Management</span> System). 
+                        Tyto programy umožňovaly vytváření tzv. prostých databázových souborů (<span class="tnode tselect">flat files</span>) se strukturou podobající se
+                        tabulce; jednotlivé řádky jsou nazývány <span class="tnode tinput">záznamy</span> (records) a jsou složeny
+                        z dílčích polí (<span class="tnode tselect">fields</span>). Každá taková struktura byla uložena v samostatném
+                        souboru a neměla vztah k jiným souborům.</p>
+                    <p>Souborový systém přitom mohl v daném čase využívat pouze jediný
+                        soubor-tabulku, a ten tedy musel obsahovat všechna potřebná data.
+                        Důsledkem byla vyšší úroveň <span class="tnode tinput">redundance</span> (nadbytečné opakování
+                        dat), což vede k častějšímu výskytu chyb v datech.</p>
+                    <p>Prostý databázový soubor může mít podobu jednoduchého textového
+                        souboru s oddělovači, který většinou obsahuje jeden záznam na jednom řádku
+                        (např. soubory typu <span class="tnode tselect">CSV</span>), nebo v sobě může kombinovat text a binární
+                        data (např. soubory typu <span class="tnode tselect">DBF</span> nebo DBM). Moderní aplikace využívají
+                        pro ukládání dat strukturované datové soubory typu <span class="tnode tselect">XML</span> (<span class="tnode tinput">eXtensible</span>
+                        Markup Language) nebo <span class="tnode tselect">JSON</span> (JavaScript Object <span class="tnode tinput">Notation</span>).</p>
+                </div>
+            </article>
+            <article class="row">
+                <div class="col-sm-12">
+                    <header class="row">
+                        <div class="col-sm-11">
+                            <h3>Nevýhody systémů pro správu souborů (FMS)</h3>
+                        </div>
+                        <div class="col-sm-1 text-right">
+                            <h5 class="symbols"><span class="glyphicon glyphicon-check"></span></h5>
+                        </div>
+                        <div class="col-sm-12">
+                            <p>Zatrhněte ty rysy, které představují nevýhody a rizika použití systémů pro správu souborů (FMS).</p>
+                        </div>
+                    </header>
+                    <ol class="tnode tcheck">
+                        <li class="item">data není možné uložit nezávisle na programu</li>
+                        <li class="item check">obvykle pomalejší sekvenční vyhledávání v rozsáhlých datových souborech</li>
+                        <li class="item check">současný přístup více uživatelů může způsobit ztrátu dat</li>
+                        <li class="item">není možné zpracovávat větší objemy dat</li>
+                        <li class="item check">redundance (nadbytečné opakování) dat</li>
+                        <li class="item">každá změna dat vyžaduje zásah programátora</li>
+                        <li class="item">data nejsou přenosná mezi různými platformami</li>
+                        <li class="item check">nízká úroveň zabezpečení dat</li>
+                    </ol>
+                </div>
+            </article>
+            <article class="row">
+                <div class="col-sm-12">
+                    <header class="row">
+                        <div class="col-sm-11">
+                            <h3>Struktura souboru RSS</h3>
+                        </div>
+                        <div class="col-sm-1 text-right">
+                            <h5 class="symbols"><span class="glyphicon glyphicon-check"></span></h5>
+                        </div>
+                        <div class="col-sm-12">
+                            <p>Uspořádejte logicky správně kód vzorového souboru RSS (data jsou uváděna v pořadí titul, odkaz, popis, případně jazyk).</p>
+                        </div>
+                    </header>
+                    <ol class="tnode tsort">
+                        <li class="ui-state-default"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</code></li>
+                        <li class="ui-state-default"><code>&lt;rss version=&quot;0.91&quot;&gt;</code></li>
+                        <li class="ui-state-default"><code>&nbsp;&nbsp;&lt;channel&gt;</code></li>
+                        <li class="ui-state-default"><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Vzorov&eacute; RSS 0.91&lt;/title&gt;</code></li>
+                        <li class="ui-state-default"><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;link&gt;http://www.server.cz/&lt;/link&gt;</code></li>
+                        <li class="ui-state-default"><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;description&gt;Popis serveru&lt;/description&gt;</code></li>
+                        <li class="ui-state-default"><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;language&gt;cs&lt;/language&gt;</code></li>
+                        <li class="ui-state-default"><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;item&gt;</code></li>
+                        <li class="ui-state-default"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Prvn&iacute; novinka&lt;/title&gt;</code></li>
+                        <li class="ui-state-default"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;link&gt;http://www.server.cz/prvni.html&lt;/link&gt;</code></li>
+                        <li class="ui-state-default"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;description&gt;Popis prvn&iacute; novinky&lt;/description&gt;</code></li>
+                        <li class="ui-state-default"><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/item&gt;</code></li>
+                        <li class="ui-state-default"><code>&nbsp;&nbsp;&lt;/channel&gt;</code></li>
+                        <li class="ui-state-default"><code>&lt;/rss&gt;</code></li>
+                    </ol>
+                </div>
+            </article>            
+        </section>
+
+        <section class="container tblock" id="p301-b002" data-key="1">
+            <header class="row">
+                <div class="col-md-11">
+                    <h2><big>B : </big> Struktura databázového systému</h2>
+                </div>
+                <div class="col-md-1 text-right">
+                    <h2 class="tvalidate" title="Vyhodnotit"><span class="glyphicon glyphicon-saved"></span></h2>
+                    <h2 class="tactivate" title="Spustit"><span class="glyphicon glyphicon-play-circle"></span></h2>
+                </div>
+            </header>
+            <footer class="row">
+            </footer>
+            <article class="row">
+                <div class="col-sm-12">
+                    <header class="row">
+                        <div class="col-sm-11">
+                            <h3>Vrstvy a součásti databázového systému</h3>
+                        </div>
+                        <div class="col-sm-1 text-right">
+                            <h5 class="symbols"><span class="glyphicon glyphicon-transfer"></span></h5>
+                        </div>
+                        <div class="col-sm-12">
+                            <p>Schematický obrázek zachycuje prvky, které tvoří strukturu běžného databázového systému.</p>
+                            <figure>
+                                <img src="img/dbms-vrstvy.png" alt="Struktura databázového systému" class="img img-responsive">
+                            </figure>
+                            <hr>
+                            <p>Přesuňte vhodný popisek na správné místo v tabulce, která je klíčem k výše uvedenému zobrazení.</p>
+                        </div>
+                    </header>
+
+                    <div class="tnode tdropper">
+                        <div class="col-sm-12">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th>1</th><td class="tdrop">Aplikační vrstva</td>
+                                    <th>2</th><td class="tdrop">Systém řízení báze dat</td>
+                                    <th>3</th><td class="tdrop">Databáze</td>
+                                    <th>4</th><td class="tdrop">Datové soubory + datové slovníky</td>
+                                    <th>5</th><td class="tdrop">Řízení databáze</td>
+                                </tr>
+                                <tr>
+                                    <th>6</th><td class="tdrop">Databázový stroj</td>
+                                    <th>7</th><td class="tdrop">Zpracování dotazů</td>
+                                    <th>8</th><td class="tdrop">Dotazy</td>
+                                    <th>9</th><td class="tdrop">Knihovny funkcí</td>
+                                    <th>10</th><td class="tdrop">Administrátor</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="row">
+                <div class="col-sm-12">
+                    <header class="row">
+                        <div class="col-sm-11">
+                            <h3>ODBC</h3>
+                        </div>
+                        <div class="col-sm-1 text-right">
+                            <h5 class="symbols"><span class="glyphicon glyphicon-pencil"></span></h5>
+                        </div>
+                        <div class="col-sm-12">
+                            <p>Zatrhněte <mark>správné</mark> vysvětlivky, které se váží k pojmu <b>ODBC</b>.</p>
+                        </div>
+                    </header>
+                    <ol class="tnode tcheck">
+                            <li class="item check">zprostředkovává komunikaci klientské aplikace se serverem</li>
+                            <li class="item">v angličtině tato zkratka znamená Open Data Connector</li>
+                            <li class="item check">aplikační rozhraní pro snadný a jednotný přístup k různým databázovým systémům</li>
+                            <li class="item check">lze používat nezávisle na programovacím jazyku i operačním systému</li>
+                            <li class="item check">komunikaci s příslušným databázovým systémem zajišťuje nainstalovaný ovladač</li>
+                            <li class="item">rozhraní umožňující tvorbu nových databázových systémů</li>
+                            <li class="item">obdobou tohoto rozhraní v Javě je systém označovaný JVM</li>
+                            <li class="item check">umožňuje současné připojení k několika různým databázovým systémům</li>
+                    </ol>                        
+                </div>
+            </article>
+        </section>
+        <section class="container tblock" id="p301-b003" data-key="2">
+            <header class="row">
+                <div class="col-md-11">
+                    <h2><big>C : </big> Uživatelé databázového systému</h2>
+                </div>
+                <div class="col-md-1 text-right">
+                    <h2 class="tvalidate" title="Vyhodnotit"><span class="glyphicon glyphicon-saved"></span></h2>
+                    <h2 class="tactivate" title="Spustit"><span class="glyphicon glyphicon-play-circle"></span></h2>
+                </div>
+            </header>
+            <footer class="row">
+            </footer>
+            <article class="row">
+                <div class="col-sm-12">
+                    <header class="row">
+                        <div class="col-sm-11">
+                            <h3>Role uživatelů DBMS</h3>
+                        </div>
+                        <div class="col-sm-1 text-right">
+                            <h5 class="symbols"><span class="glyphicon glyphicon-transfer"></span></h5>
+                        </div>
+                        <div class="col-sm-12">
+                            <p>Přesuňte jednotlivé činnosti a charakteristiky do správné skupiny uživatelů.</p>
+                        </div>
+                    </header>
+
+                    <div class="tnode tgroups">
+                        <div class="col-sm-3">
+                            <h4>Běžní uživatelé</h4>
+                            <ul class="tgroup connectedSortable">
+                                <li class="ui-state-default">vkládají a aktualizují data pomocí formulářů</li>
+                                <li class="ui-state-default">tisknou výstupní sestavy</li>
+                                <li class="ui-state-default">nemusí mít podrobné znalosti o fungování DBMS</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-3">
+                            <h4>Vývojáři a programátoři</h4>
+                            <ul class="tgroup connectedSortable">
+                                <li class="ui-state-default">vyvíjejí databázové aplikace</li>
+                                <li class="ui-state-default">vytvářejí uživatelské rozhraní</li>
+                                <li class="ui-state-default">ověřují validitu ukládaných dat</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-3">
+                            <h4>Databázoví analytici (DA)</h4>
+                            <ul class="tgroup connectedSortable">
+                                <li class="ui-state-default">zodpovídají za návrh databáze</li>
+                                <li class="ui-state-default">zvažují požadavky na systém</li>
+                                <li class="ui-state-default">zjišťují vztahy mezi ukládanými daty</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-3">
+                            <h4>Administrátoři databází</h4>
+                            <ul class="tgroup connectedSortable">
+                                <li class="ui-state-default">starají se o spolehlivý chod databází</li>
+                                <li class="ui-state-default">provádějí pravidelnou údržbu databáze</li>
+                                <li class="ui-state-default">monitorují výkon databáze</li>
+                                <li class="ui-state-default">zřizují a nastavují uživatelské účty</li>
+                            </ul>
+                        </div>
+                    </div>
+            </article>
+        </section>
+
+        <section class="container tblock" id="p301-b004" data-key="3">
+            <header class="row">
+                <div class="col-md-11">
+                    <h2><big>D : </big> Klasifikace databází</h2>
+                </div>
+                <div class="col-md-1 text-right">
+                    <h2 class="tvalidate" title="Vyhodnotit"><span class="glyphicon glyphicon-saved"></span></h2>
+                    <h2 class="tactivate" title="Spustit"><span class="glyphicon glyphicon-play-circle"></span></h2>
+                </div>
+            </header>
+            <footer class="row">
+            </footer>
+            <article class="row">
+                    <div class="col-sm-12">
+                        <header class="row">
+                            <div class="col-sm-11">
+                                <h3>Rozdělení DBMS podle různých kritérií</h3>
+                            </div>
+                            <div class="col-sm-1 text-right">
+                                <h5 class="symbols"><span class="glyphicon glyphicon-transfer"></span></h5>
+                            </div>
+                            <div class="col-sm-12">
+                                <p>Přesuňte jednotlivé pojmy tak, aby výsledkem byla přehledná klasifikace databázových systémů.</p>
+                            </div>
+                        </header>
+    
+                        <div class="tnode tgroups">
+                            <div class="col-sm-4">
+                                <h4>Podle přístupu uživatelů</h4>
+                                <ul class="tgroup connectedSortable">
+                                    <li class="ui-state-default">Jednouživatelské</li>
+                                    <li class="ui-state-default">Víceuživatelské</li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-4">
+                                <h4>Podle způsobu organizace provozu</h4>
+                                <ul class="tgroup connectedSortable">
+                                    <li class="ui-state-default">Klient-server</li>
+                                    <li class="ui-state-default">File-server</li>
+                                    <li class="ui-state-default">Centralizované</li>
+                                    <li class="ui-state-default">Distribuované</li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-4">
+                                <h4>Podle použitého datového typu</h4>
+                                <ul class="tgroup connectedSortable">
+                                    <li class="ui-state-default">Hierarchické</li>
+                                    <li class="ui-state-default">Síťové</li>
+                                    <li class="ui-state-default">Relační</li>
+                                    <li class="ui-state-default">Objektové</li>
+                                    <li class="ui-state-default">Objektově-relační</li>
+                                    <li class="ui-state-default">Multidimensionální</li>
+                                </ul>
+                            </div>
+                        </div>
+                </article>
+                <article class="row">
+                <div class="col-sm-12">
+                    <header class="row">
+                        <div class="col-sm-11">
+                            <h3>Distribuované DBMS</h3>
+                        </div>
+                        <div class="col-sm-1 text-right">
+                            <h5 class="symbols"><span class="glyphicon glyphicon-check"></span></h5>
+                        </div>
+                        <div class="col-sm-12">
+                            <p>Zatrhněte charakteristiky, které lze použít pro <b>distribuované databázové systémy</b>.</p>
+                        </div>
+                    </header>
+                    <ol class="tnode tcheck">
+                        <li class="item check">Kromě podnikových databází velkých firem běží v pozadí významných internetových služeb (Google, Facebook, You-Tube a mnoha dalších).</li>
+                        <li class="item">Databáze i obslužné aplikace jsou centrálně umístěny na jednom počítači, kterým je server nebo mainframe.</li>
+                        <li class="item">Uživatelé k centrálnímu systému přistupují prostřednictvím terminálů vybavených základními vstupními zařízeními (klávesnice, čtečka čárových kódů apod.) a displejem.</li>
+                        <li class="item check">Data jsou rozdělena do několika databází, z nichž každá je uložena na odlišném počítači, často i na různých místech (centrála firmy, sklad…).</li>
+                        <li class="item check">Počítače jsou propojeny v síti a nastaveny tak, aby se přihlášenému uživateli jevily jako jeden celistvý systém.</li>
+                        <li class="item check">Často je toto řešení používáno kvůli rozdělení zátěže serverů v případě velmi využívaných aplikací.</li>
+                        <li class="item">Jsou kvůli bezpečnosti hojně využívány v bankách, supermarketech, letištních terminálech apod.</li>
+                    </ol>
+                </div>
+            </article>
+        </section>
+
+        <section class="container tblock" id="p301-b005" data-key="4">
+            <header class="row">
+                <div class="col-md-11">
+                    <h2><big>E : </big> Předrelační databáze</h2>
+                </div>
+                <div class="col-md-1 text-right">
+                    <h2 class="tvalidate" title="Vyhodnotit"><span class="glyphicon glyphicon-saved"></span></h2>
+                    <h2 class="tactivate" title="Spustit"><span class="glyphicon glyphicon-play-circle"></span></h2>
+                </div>
+            </header>
+            <footer class="row">
+            </footer>
+            <article class="row">
+                    <div class="col-sm-12">
+                        <header class="row">
+                            <div class="col-sm-11">
+                                <h3>Předrelační databáze</h3>
+                            </div>
+                            <div class="col-sm-1 text-right">
+                                <h5 class="symbols"><span class="glyphicon glyphicon-transfer"></span></h5>
+                            </div>
+                            <div class="col-sm-12">
+                                <p>Doplňte chybějící pojmy (v jednotném čísle) a proveďte přesuny jednotlivých bloků tak, abyste získali správné charakteristiky typů předrelačních databází.</p>
+                            </div>
+                        </header>
+    
+                        <div class="tnode tgroups">
+                            <div class="col-sm-6">
+                                <h4><span class="tnode tinput">Síťová</span> databáze</h4>
+                                <figure><img src="img/dbms02.png" alt="DBMS" class="img img-responsive"></figure>
+                                <ul class="tgroup connectedSortable">
+                                    <li class="ui-state-default">záznamy uspořádány do struktury, která připomíná síť</li>
+                                    <li class="ui-state-default">používají se pojmy člen (member) a vlastník (owner)</li>
+                                    <li class="ui-state-default">objekt může mít více nadřazených objektů</li>
+                                    <li class="ui-state-default">ideální pro vyjádření vztahů M:N</li>
+                                    <li class="ui-state-default">nevýhodou je obtížná změna struktury</li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6">
+                                <h4><span class="tnode tinput">Hierarchická</span> databáze</h4>
+                                <figure><img src="img/dbms01.png" alt="DBMS" class="img img-responsive"></figure>
+                                <ul class="tgroup connectedSortable">
+                                    <li class="ui-state-default">záznamy uspořádány do struktury, která připomíná rodokmen</li>
+                                    <li class="ui-state-default">používají se pojmy předci (parents) a potomci (childs)</li>
+                                    <li class="ui-state-default">objekt má vždy pouze jediný nadřazený objekt</li>
+                                    <li class="ui-state-default">velmi rychlý přístup k datům díky předem definovaným vztahům</li>
+                                    <li class="ui-state-default">dnes přežívá spíše jen v některých typech rezervačních systémů</li>
+                                    <li class="ui-state-default">ideální pro vyjádření vztahů 1:N</li>
+                                    <li class="ui-state-default">v případě potřeby vícenásobných vztahů mezi daty vzniká velká redundance</li>
+                                </ul>
+                            </div>
+                        </div>
+                </article>
+        </section>
+
+        <section class="container tblock" id="p301-b006" data-key="5">
+            <header class="row">
+                <div class="col-md-11">
+                    <h2><big>F : </big> Relační a objektové databáze</h2>
+                </div>
+                <div class="col-md-1 text-right">
+                    <h2 class="tvalidate" title="Vyhodnotit"><span class="glyphicon glyphicon-saved"></span></h2>
+                    <h2 class="tactivate" title="Spustit"><span class="glyphicon glyphicon-play-circle"></span></h2>
+                </div>
+            </header>
+            <footer class="row">
+            </footer>
+            <article class="row">
+                    <div class="col-sm-12">
+                        <header class="row">
+                            <div class="col-sm-11">
+                                <h3>Relační a objektově-orientované databáze</h3>
+                            </div>
+                            <div class="col-sm-1 text-right">
+                                <h5 class="symbols"><span class="glyphicon glyphicon-transfer"></span></h5>
+                            </div>
+                            <div class="col-sm-12">
+                                <p>Doplňte v textu chybějící slova, pojmy a zkratky.</p>
+                            </div>
+                        </header>   
+                        <div class="row">                            
+                            <div class="col-sm-6"> 
+                                <h4>Relační databáze</h4>
+                                <p>V roce 1970 vystoupil anglický vědec E. F. Codd s návrhem relačního datového modelu, který se stal základem relačních databází. 
+                                V relačních databázových systémech (<span class="tnode tselect">RDBMS</span>) jsou data uložena v tabulkách
+                                (z pohledu samotné relační teorie je označujeme matematickým pojmem <span class="tnode tinput">relace</span>, které jsou
+                                tvořeny řádky a sloupci.</p>
+                                <p>Každý řádek musí být jednoznačně identifikován a každý sloupec má unikátní název.
+                                Kvůli minimalizaci nadbytečného opakování dat jsou v relačních  databázích data rozdělena
+                                do většího množství tabulek a ty jsou mezi sebou provázány díky společně sdíleným sloupcům – <span class="tnode tinput">primárním</span> a 
+                                <span class="tnode tinput">cizím</span> klíčům.</p>
+                                <p>Podle relační teorie je možné pomocí základních operací (sjednocení, kartézský součin, rozdíl, selekce, projekce
+                                a spojení) uskutečnit nad relační databází veškeré operace s daty.
+                                Tyto operace provádí databázový stroj na podkladě <span class="tnode tinput">dotazů</span> (queries). 
+                                Ty mohou být vytvářeny pomocí dotazovacích jazyků, jako jsou
+                                <span class="tnode tselect">SQL</span> (<span class="tnode tinput">Structured</span> Query Language) 
+                                či <span class="tnode tselect">QBE</span> (Query by <span class="tnode tinput">Example</span>).</p>
+                                <p>Programovací technika označované jako <span class="tnode tselect">ORM</span> se stará o konverzi mezi relační databází a objekty v objektově orientovaném jazyce.
+                                Usnadňuje zejména provádění běžných databázových operací, jako jsou čtení, zápis, úprava a mazání dat (<span class="tnode tselect">CRUD</span> operace).
+                                Jednou z výhod použití je nezávislost vyvíjené aplikace na konkrétním databázovém systému.</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <h4>Objektově-orientované databáze</h4>
+                                <p>V souvislosti se vznikem objektově orientovaného programování (OOP) se objevily objektově-orientované databázové systémy
+                                (<span class="tnode tselect">ODBMS</span>) založené  na objektovém datovém modelu. Jeho základní prvek – objekt – neobsahuje
+                                pouze data, ale zahrnuje současně i <span class="tnode tinput">metody</span>, které mohou
+                                s daty provádět určité operace (např. kontrolu vstupů, formátování výstupů, různé výpočty apod.).</p>
+                                <p>Kromě toho je možné využívat i dalších výhod spojených s koncepcí
+                                OOP, včetně <span class="tnode tinput">dědičnosti</span> a polymorfismu.</p>
+                                <p>Objekty navíc nemusí být předem daným a uzavřeným celkem a mohou
+                                obsahovat i nestrukturovaná data v různých podobách, včetně grafiky,
+                                audia či videa. Velmi efektivní může být rovněž přístup k datovým objektům;
+                                v tomto případě se k manipulaci s daty používá jazyk <span class="tnode tselect">OQL</span>.</p>
+                                <h5>Oblasti využití</h5>
+                                <ul>
+                                    <li><span class="tnode tinput">Multimediální</span> databáze pro ukládání fotek nebo klipů.</li>
+                                    <li>Geografické systémy (<span class="tnode tselect">GIS</span>), které nabízejí několik různých vrstev map napojených na aktuální data.</li>
+                                    <li>Databáze pro <span class="tnode tselect">groupware</span> sloužící k ukládání dokumentů jako jsou kalendáře,
+                                        časové plány, manuály, poznámky nebo zprávy.</li>    
+                                    <li>Databáze pro <span class="tnode tselect">CAD</span> systémy, které mohou obsahovat uložené grafické komponenty nebo třeba předchozí verze návrhů
+                                        technických výkresů a modelů.</li>
+                                    <li><span class="tnode tinput">Hypertextové</span> databáze obsahující odkazy  na různé zdroje informací umístěné na Internetu; využívají je různé vyhledávací
+                                        služby.</li>    
+                                </ul>
+                            </div>
+                        </div>
+                </article>
+        </section>
+
+        <section class="container tblock" id="p301-b007" data-key="6">
+            <header class="row">
+                <div class="col-md-11">
+                    <h2><big>G : </big> Multidimensionální databáze a datové sklady</h2>
+                </div>
+                <div class="col-md-1 text-right">
+                    <h2 class="tvalidate" title="Vyhodnotit"><span class="glyphicon glyphicon-saved"></span></h2>
+                    <h2 class="tactivate" title="Spustit"><span class="glyphicon glyphicon-play-circle"></span></h2>
+                </div>
+            </header>
+            <footer class="row">
+            </footer>
+            <article class="row">
+                    <div class="col-sm-12">
+                        <header class="row">
+                            <div class="col-sm-11">
+                                <h3>Multidimensionální databáze a datové sklady</h3>
+                            </div>
+                            <div class="col-sm-1 text-right">
+                                <h5 class="symbols"><span class="glyphicon glyphicon-transfer"></span></h5>
+                            </div>
+                            <div class="col-sm-12">
+                                <p>Doplňte v textu chybějící slova, pojmy a zkratky.</p>
+                            </div>
+                        </header>   
+                        <div class="row">                            
+                            <div class="col-sm-6"> 
+                                <h4>Multidimensionální databáze</h4>
+                                <p>Multidimensionální databáze (<span class="tnode tselect">MDDB</span>) byly vyvinuty spíše za účelem <span class="tnode tinput">analýzy</span> dat 
+                                než kvůli provádění online transakcí. Oproti běžným relačním databázím zvládají mnohonásobně rychleji zpracování 
+                                rozsáhlých souhrnných informací.</p>
+                                <p>Data, která jsou shromažďována z různých zdrojů (často z relačních a objektových databází), jsou sumarizována a uspořádána do speciální vícerozměrné struktury – <span class="tnode tselect">hypercube</span>. 
+                                Takový multidimenzionální datový model umožňuje předdefinovat pohledy na data z různých úhlů – neboli <span class="tnode tinput">dimenzí</span>.</p>
+                                <p>Mezi programové prostředky, které jsou používány ve spojení s multidimenzionálními databázemi, patří tzv. <span class="tnode tselect">OLAP</span> technologie. 
+                                Výstupními informacemi těchto programů jsou především analyticky zaměřené tabulky, grafy a nejrůznější diagramy, 
+                                kterými lze disponovat při tvorbě obchodních zpráv nebo při strategickém rozhodování na podkladě zjištěných trendů.</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <h4>Datové sklady</h4>
+                                <p>Datové sklady (data <span class="tnode tselect">warehouse</span>) jsou obrovské databáze, které přechovávají a spravují velké objemy dat. 
+                                V datových skladech jsou uloženy informace nejen o aktuálních transakcích, ale často i těch provedených v minulosti. 
+                                Vzhledem k svému rozsahu bývají datové sklady <span class="tnode tinput">distribuované</span> databáze, 
+                                které jsou rozděleny na serverech umístěných v různých lokalitách 
+                                a propojeny prostřednictvím Internetu tak, aby fungovaly jako jeden celek.</p>
+                                <p>Menší verze datových skladů jsou odborně nazývány data <span class="tnode tselect">mart</span>. 
+                                Jsou k dispozici specifickým skupinám uživatelů nebo slouží pro potřeby jednoho oddělení či pobočky velké společnosti.</p>
+                                <p>Datové sklady jsou využívány také pro tzv. „dolování dat“ (data <span class="tnode tinput">mining</span>). 
+                                Prostřednictvím webových aplikací mohou datové sklady posloužit i běžným uživatelům – například k zjištění historie provedených transakcí 
+                                v souvislosti s konkrétní kreditní kartou, bankovním účtem apod.</p>
+                            </div>
+                        </div>
+                </article>
+                <article class="row">
+                        <div class="col-sm-12">
+                            <header class="row">
+                                <div class="col-sm-11">
+                                    <h3>Dolování dat</h3>
+                                </div>
+                                <div class="col-sm-1 text-right">
+                                    <h5 class="symbols"><span class="glyphicon glyphicon-check"></span></h5>
+                                </div>
+                                <div class="col-sm-12">
+                                    <p>Uspořádejte v časovém sledu činnosti, které se obvykle provádějí v souvislosti s tzv. dolováním dat.</p>
+                                </div>
+                            </header>
+                            <ol class="tnode tsort">
+                                <li class="ui-state-default">zadání požadovaného výstupu</li>
+                                <li class="ui-state-default">sběr dat z různých zdrojů</li>
+                                <li class="ui-state-default">proces očištění dat a oddělení metadat</li>
+                                <li class="ui-state-default">analýza dat</li>
+                                <li class="ui-state-default">výstupní informace a matematické modely</li>
+                                <li class="ui-state-default">cílená reklamní kampaň</li>
+                            </ol>
+                        </div>
+                    </article>                                    
+        </section>
+        
+        <section class="container tblock" id="p301-b008" data-key="7">
+            <header class="row">
+                <div class="col-md-11">
+                    <h2><big>X : </big> Křížovka</h2>
+                </div>
+                <div class="col-md-1 text-right">
+                    <h2 class="tvalidate" title="Vyhodnotit"><span class="glyphicon glyphicon-saved"></span></h2>
+                    <h2 class="tactivate" title="Spustit"><span class="glyphicon glyphicon-play-circle"></span></h2>
+                </div>
+            </header>
+            <footer class="row">
+            </footer>
+            <article class="row">
+                <div class="col-sm-12">
+                    <header class="row">
+                        <div class="col-sm-11">
+                            <h3>Křížovka pojmů z oblasti databázových systémů</h3>
+                        </div>
+                        <div class="col-sm-1 text-right">
+                            <h5 class="symbols"><span class="glyphicon glyphicon-th"></span></h5>
+                        </div>
+                        <div class="col-sm-12">
+                            <p>Vyplňte křížovku podle následující legendy.</p>
+                        </div>
+                    </header>
+                    <div class="tnode tcrosswords">
+                        <ol>
+                            <li><mark>|H|YBRIDNÍ</mark>Označení databází, které v sobě spojují relační i objektové rysy</li>
+                            <li><mark>M|Y|SQL</mark>Populární relační open source databázový systém</li>
+                            <li><mark>OLA|P|</mark>Technologie využívané k analýze dat (zkratka)</li>
+                            <li><mark>T|E|RMINÁL</mark>Bezdiskový počítač</li>
+                            <li><mark>O|R|M</mark>Objektově relační mapování (zkratka)</li>
+                            <li><mark>BAC|K|-END</mark>Označení serverové části aplikace (včetně pomlčky)</li>
+                            <li><mark>FR|O|NT-END</mark>Označení klientské části aplikace (včetně pomlčky)</li>
+                            <li><mark>GI|S|</mark>Geografický systém (zkratka)</li>
+                            <li><mark>KAR|T|OTÉKA</mark>Papírový předchůdce databází</li>
+                            <li><mark>|K|LÍČ</mark>Může být primární i cizí</li>
+                            <li><mark>REL|A|CE</mark>Matematický pojem, který je základem RDBMS</li>
+                        </ol>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container-fluid">
+            <hr>
+            <p>&copy; 2017</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')
+    </script>
+    <script src="js/plugins.js"></script>
+
+    <!-- Latest compiled and minified JS -->
+    <!--
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+    <script src="http://d3js.org/d3.v3.min.js" language="JavaScript"></script>
+    <script src="js/vendor/c3/c3.min.js"></script>
+    <script src="js/vendor/liquidFillGauge.js" language="JavaScript"></script>
+    <script src="js/vendor/moment.js" language="JavaScript"></script>
+    <script src="js/vendor/gauge.min.js" language="JavaScript"></script>
+    <script src="js/vendor/slick/slick.min.js" language="JavaScript"></script>
+    <script src="http://itemslide.github.io/dist/itemslide.min.js"></script>
+    <script>
+        var inputData = {}
+        $(function() {
+            $.ajax({
+                    type: "GET",
+                    //contentType: 'application/json',
+                    url: "http://localhost:8000/api/activities/20/",
+                    //data: { name: "John", location: "Boston" }
+                    async: false,
+                    /*headers: {
+                        "Authorization": "Basic " + btoa("admin" + ":" + "administrator")
+                    },*/
+                    /*xhrFields: {
+                        // The 'xhrFields' property sets additional fields on the XMLHttpRequest.
+                        // This can be used to set the 'withCredentials' property.
+                        // Set the value to 'true' if you'd like to pass cookies to the server.
+                        // If this is enabled, your server must respond with the header
+                        // 'Access-Control-Allow-Credentials: true'.
+                        withCredentials: true
+                    },*/
+                    success: function() {
+                        /* alert('success');
+                         console.log('cosi');*/
+                    },
+                    beforeSend: function(xhr) {
+                        xhr.setRequestHeader("Authorization", "Basic " + btoa("admin" + ":" + "administrator"));
+                        //xhr.setRequestHeader('X-CSRFTOKEN', csrftoken);
+                    },
+                })
+                .done(function(msg) {
+                    inputdata = JSON.parse(msg.data);
+                });
+
+
+            $("#reset").on("click", function() {
+                inputdata = result;
+                var jsonData = {
+                    student: 7,
+                    lesson: 2,
+                    data: JSON.stringify(inputdata)
+                };
+                console.log(JSON.stringify(inputdata));
+                $.ajax({
+                    type: "PUT",
+                    url: "http://localhost:8000/api/activities/20/update/",
+                    data: JSON.stringify(jsonData),
+                    contentType: 'application/json',
+                    success: function() {
+                        alert('success');
+                    },
+                    beforeSend: function(xhr) {
+                        xhr.setRequestHeader("Authorization", "Basic " + btoa("it0003" + ":" + "it0003"));
+                        //xhr.setRequestHeader('X-CSRFTOKEN', csrftoken);
+                    },
+                });
+            });
+
+        });
+    </script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
