@@ -452,7 +452,8 @@ p.checked {
 
 .tgroups ul li,
 .tcheck li,
-.tsort li {
+.tsort li,
+.tlabel li {
     margin: 5px 0;
     padding: 10px;
     border: 1px solid #ddd;
